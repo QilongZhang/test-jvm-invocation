@@ -1,0 +1,193 @@
+2019-03-11 15:27:24,964 INFO  main                             - Begin to start ArkServiceContainer
+2019-03-11 15:27:25,364 INFO  main                             - Init Service: com.alipay.sofa.ark.container.session.StandardTelnetServerImpl
+2019-03-11 15:27:25,378 INFO  main                             - Listening on port: 1234
+2019-03-11 15:27:25,381 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.plugin.PluginDeployServiceImpl
+2019-03-11 15:27:25,381 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl
+2019-03-11 15:27:25,382 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.classloader.ClassLoaderServiceImpl
+2019-03-11 15:27:25,385 INFO  main                             - Finish to start ArkServiceContainer
+2019-03-11 15:27:25,401 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2019-03-11 15:27:25,493 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2019-03-11 15:27:25,493 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2019-03-11 15:27:25,497 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:27:25,497 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:27:25,497 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:27:25,498 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:27:25,498 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.event.EventAdminService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:27:25,498 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.registry.RegistryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:27:25,501 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.biz.BizDeployer', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2019-03-11 15:27:25,501 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizDeployer publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2019-03-11 15:27:25,502 INFO  main                             - Inject {field= pluginManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2019-03-11 15:27:25,502 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2019-03-11 15:27:25,503 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2019-03-11 15:27:25,503 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2019-03-11 15:27:25,503 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2019-03-11 15:27:25,503 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2019-03-11 15:27:25,511 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2019-03-11 15:27:25,511 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2019-03-11 15:27:25,511 INFO  main                             - Start to deploy plugin: web-ark-plugin
+2019-03-11 15:27:25,518 INFO  main                             - Service: com.alipay.sofa.ark.spi.web.EmbeddedServerService publish by: ServiceProvider{provider='Ark plugin:web-ark-plugin', order=100} succeed
+2019-03-11 15:27:25,518 INFO  main                             - Finish to deploy plugin: web-ark-plugin
+2019-03-11 15:27:25,518 INFO  main                             - Start to deploy plugin: spi-facade
+2019-03-11 15:27:25,518 INFO  main                             - Finish to deploy plugin: spi-facade
+2019-03-11 15:27:25,518 INFO  main                             - Start to deploy plugin: runtime-sofa-boot-plugin
+2019-03-11 15:27:25,561 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.event.EventHandler publish by: ServiceProvider{provider='Ark plugin:runtime-sofa-boot-plugin', order=1500} succeed
+2019-03-11 15:27:25,566 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.runtime.integration.invoke.DynamicJvmServiceProxyFinder', provider='ServiceProvider{provider='Ark plugin:runtime-sofa-boot-plugin', order=1500}'}} success!
+2019-03-11 15:27:25,566 INFO  main                             - Service: com.alipay.sofa.runtime.integration.invoke.DynamicJvmServiceProxyFinder publish by: ServiceProvider{provider='Ark plugin:runtime-sofa-boot-plugin', order=1500} succeed
+2019-03-11 15:27:25,566 INFO  main                             - Finish to deploy plugin: runtime-sofa-boot-plugin
+2019-03-11 15:27:25,566 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2019-03-11 15:27:25,566 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+2019-03-11 15:27:25,566 INFO  main                             - BizDeployer='{name='DefaultBizDeployer', provider='Ark Container'}' is starting.
+2019-03-11 15:27:25,566 INFO  main                             - Begin to start biz: dynamic-app
+2019-03-11 15:27:27,742 INFO  main                             - Finish to start biz: dynamic-app
+2019-03-11 15:27:27,742 INFO  main                             - Begin to start biz: master-app
+2019-03-11 15:27:31,344 INFO  main                             - Inject {field= eventAdminService} of {service= com.alipay.sofa.ark.springboot.processor.ArkEventHandlerProcessor@286b39c2} success!
+2019-03-11 15:27:31,479 INFO  main                             - Inject {field= embeddedServerService} of {service= com.alipay.sofa.ark.springboot.web.ArkTomcatServletWebServerFactory@3bcd426c} success!
+2019-03-11 15:27:31,480 INFO  main                             - Inject {field= bizManagerService} of {service= com.alipay.sofa.ark.springboot.web.ArkTomcatServletWebServerFactory@3bcd426c} success!
+2019-03-11 15:27:33,547 INFO  main                             - Finish to start biz: master-app
+2019-03-11 15:27:33,548 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+2019-03-11 15:27:33,548 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.FinishStartupStage
+2019-03-11 15:27:33,548 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.FinishStartupStage
+2019-03-11 15:27:55,117 INFO  main                             - Begin to start ArkServiceContainer
+2019-03-11 15:27:55,398 INFO  Thread-2                         - Begin to stop ArkServiceContainer
+2019-03-11 15:27:55,399 INFO  Thread-2                         - Finish to stop ArkServiceContainer
+2019-03-11 15:33:08,818 INFO  Thread-0                         - Begin to stop ArkServiceContainer
+2019-03-11 15:33:08,820 INFO  Thread-0                         - Dispose service: com.alipay.sofa.ark.container.service.classloader.ClassLoaderServiceImpl
+2019-03-11 15:33:08,820 INFO  Thread-0                         - Dispose service: com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl
+2019-03-11 15:33:08,821 INFO  Thread-0                         - BizDeployer='{name='DefaultBizDeployer', provider='Ark Container'}' is stopping.
+2019-03-11 15:33:08,821 INFO  Thread-0                         - Begin to stop biz: dynamic-app
+2019-03-11 15:33:08,822 INFO  Thread-0                         - Finish to stop biz: dynamic-app
+2019-03-11 15:33:08,822 INFO  Thread-0                         - Begin to stop biz: master-app
+2019-03-11 15:33:08,835 INFO  Thread-0                         - Finish to stop biz: master-app
+2019-03-11 15:33:08,835 INFO  Thread-0                         - Dispose service: com.alipay.sofa.ark.container.service.plugin.PluginDeployServiceImpl
+2019-03-11 15:33:08,835 INFO  Thread-0                         - Start to unDeploy plugin: runtime-sofa-boot-pluginruntime-sofa-boot-plugin
+2019-03-11 15:33:08,835 INFO  Thread-0                         - Stop to unDeploy plugin: runtime-sofa-boot-pluginruntime-sofa-boot-plugin
+2019-03-11 15:33:08,835 INFO  Thread-0                         - Start to unDeploy plugin: spi-facadespi-facade
+2019-03-11 15:33:08,835 INFO  Thread-0                         - Stop to unDeploy plugin: spi-facadespi-facade
+2019-03-11 15:33:08,835 INFO  Thread-0                         - Start to unDeploy plugin: web-ark-pluginweb-ark-plugin
+2019-03-11 15:33:08,835 INFO  Thread-0                         - Stop to unDeploy plugin: web-ark-pluginweb-ark-plugin
+2019-03-11 15:33:08,835 INFO  Thread-0                         - Dispose service: com.alipay.sofa.ark.container.session.StandardTelnetServerImpl
+2019-03-11 15:33:08,836 INFO  Thread-0                         - Finish to stop ArkServiceContainer
+2019-03-11 15:33:31,750 INFO  main                             - Begin to start ArkServiceContainer
+2019-03-11 15:33:32,119 INFO  main                             - Init Service: com.alipay.sofa.ark.container.session.StandardTelnetServerImpl
+2019-03-11 15:33:32,140 INFO  main                             - Listening on port: 1234
+2019-03-11 15:33:32,141 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.plugin.PluginDeployServiceImpl
+2019-03-11 15:33:32,142 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl
+2019-03-11 15:33:32,142 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.classloader.ClassLoaderServiceImpl
+2019-03-11 15:33:32,146 INFO  main                             - Finish to start ArkServiceContainer
+2019-03-11 15:33:32,159 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2019-03-11 15:33:32,207 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2019-03-11 15:33:32,208 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2019-03-11 15:33:32,211 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:33:32,212 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:33:32,212 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:33:32,213 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:33:32,213 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.event.EventAdminService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:33:32,213 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.registry.RegistryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:33:32,215 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.biz.BizDeployer', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2019-03-11 15:33:32,215 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizDeployer publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2019-03-11 15:33:32,216 INFO  main                             - Inject {field= pluginManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2019-03-11 15:33:32,217 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2019-03-11 15:33:32,218 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2019-03-11 15:33:32,218 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2019-03-11 15:33:32,218 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2019-03-11 15:33:32,218 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2019-03-11 15:33:32,225 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2019-03-11 15:33:32,225 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2019-03-11 15:33:32,225 INFO  main                             - Start to deploy plugin: web-ark-plugin
+2019-03-11 15:33:32,232 INFO  main                             - Service: com.alipay.sofa.ark.spi.web.EmbeddedServerService publish by: ServiceProvider{provider='Ark plugin:web-ark-plugin', order=100} succeed
+2019-03-11 15:33:32,232 INFO  main                             - Finish to deploy plugin: web-ark-plugin
+2019-03-11 15:33:32,232 INFO  main                             - Start to deploy plugin: runtime-sofa-boot-plugin
+2019-03-11 15:33:32,262 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.event.EventHandler publish by: ServiceProvider{provider='Ark plugin:runtime-sofa-boot-plugin', order=1500} succeed
+2019-03-11 15:33:32,264 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.runtime.integration.invoke.DynamicJvmServiceProxyFinder', provider='ServiceProvider{provider='Ark plugin:runtime-sofa-boot-plugin', order=1500}'}} success!
+2019-03-11 15:33:32,266 INFO  main                             - Service: com.alipay.sofa.runtime.integration.invoke.DynamicJvmServiceProxyFinder publish by: ServiceProvider{provider='Ark plugin:runtime-sofa-boot-plugin', order=1500} succeed
+2019-03-11 15:33:32,266 INFO  main                             - Finish to deploy plugin: runtime-sofa-boot-plugin
+2019-03-11 15:33:32,266 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2019-03-11 15:33:32,266 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+2019-03-11 15:33:32,267 INFO  main                             - BizDeployer='{name='DefaultBizDeployer', provider='Ark Container'}' is starting.
+2019-03-11 15:33:32,267 INFO  main                             - Begin to start biz: Startup In IDE
+2019-03-11 15:33:33,647 INFO  main                             - Inject {field= eventAdminService} of {service= com.alipay.sofa.ark.springboot.processor.ArkEventHandlerProcessor@c82d975} success!
+2019-03-11 15:33:33,685 INFO  main                             - Inject {field= embeddedServerService} of {service= com.alipay.sofa.ark.springboot.web.ArkTomcatServletWebServerFactory@4fc4490b} success!
+2019-03-11 15:33:33,685 INFO  main                             - Inject {field= bizManagerService} of {service= com.alipay.sofa.ark.springboot.web.ArkTomcatServletWebServerFactory@4fc4490b} success!
+2019-03-11 15:33:34,455 INFO  main                             - Finish to start biz: Startup In IDE
+2019-03-11 15:33:34,456 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+2019-03-11 15:33:34,456 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.FinishStartupStage
+2019-03-11 15:33:34,456 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.FinishStartupStage
+2019-03-11 15:34:05,741 INFO  Thread-2                         - Begin to stop ArkServiceContainer
+2019-03-11 15:34:05,743 INFO  Thread-2                         - Dispose service: com.alipay.sofa.ark.container.service.classloader.ClassLoaderServiceImpl
+2019-03-11 15:34:05,744 INFO  Thread-2                         - Dispose service: com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl
+2019-03-11 15:34:05,744 INFO  Thread-2                         - BizDeployer='{name='DefaultBizDeployer', provider='Ark Container'}' is stopping.
+2019-03-11 15:34:05,744 INFO  Thread-2                         - Begin to stop biz: Startup In IDE
+2019-03-11 15:34:05,751 INFO  Thread-2                         - Finish to stop biz: Startup In IDE
+2019-03-11 15:34:05,751 INFO  Thread-2                         - Dispose service: com.alipay.sofa.ark.container.service.plugin.PluginDeployServiceImpl
+2019-03-11 15:34:05,751 INFO  Thread-2                         - Start to unDeploy plugin: runtime-sofa-boot-pluginruntime-sofa-boot-plugin
+2019-03-11 15:34:05,751 INFO  Thread-2                         - Stop to unDeploy plugin: runtime-sofa-boot-pluginruntime-sofa-boot-plugin
+2019-03-11 15:34:05,751 INFO  Thread-2                         - Start to unDeploy plugin: web-ark-pluginweb-ark-plugin
+2019-03-11 15:34:05,751 INFO  Thread-2                         - Stop to unDeploy plugin: web-ark-pluginweb-ark-plugin
+2019-03-11 15:34:05,751 INFO  Thread-2                         - Dispose service: com.alipay.sofa.ark.container.session.StandardTelnetServerImpl
+2019-03-11 15:34:05,754 INFO  Thread-2                         - Finish to stop ArkServiceContainer
+2019-03-11 15:34:20,939 INFO  main                             - Begin to start ArkServiceContainer
+2019-03-11 15:34:21,363 INFO  main                             - Init Service: com.alipay.sofa.ark.container.session.StandardTelnetServerImpl
+2019-03-11 15:34:21,377 INFO  main                             - Listening on port: 1234
+2019-03-11 15:34:21,379 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.plugin.PluginDeployServiceImpl
+2019-03-11 15:34:21,380 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl
+2019-03-11 15:34:21,380 INFO  main                             - Init Service: com.alipay.sofa.ark.container.service.classloader.ClassLoaderServiceImpl
+2019-03-11 15:34:21,383 INFO  main                             - Finish to start ArkServiceContainer
+2019-03-11 15:34:21,399 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2019-03-11 15:34:21,514 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.HandleArchiveStage
+2019-03-11 15:34:21,514 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2019-03-11 15:34:21,519 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:34:21,519 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:34:21,519 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginManagerService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:34:21,520 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.plugin.PluginFactoryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:34:21,520 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.event.EventAdminService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:34:21,520 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.registry.RegistryService publish by: ServiceProvider{provider='Ark Container', order=-2147483648} succeed
+2019-03-11 15:34:21,523 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.biz.BizDeployer', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2019-03-11 15:34:21,523 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.biz.BizDeployer publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2019-03-11 15:34:21,524 INFO  main                             - Inject {field= pluginManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2019-03-11 15:34:21,524 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:plugin-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2019-03-11 15:34:21,525 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider', provider='ServiceProvider{provider='Ark Container', order=100}'}} success!
+2019-03-11 15:34:21,525 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.session.CommandProvider:biz-command-provider publish by: ServiceProvider{provider='Ark Container', order=100} succeed
+2019-03-11 15:34:21,525 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.RegisterServiceStage
+2019-03-11 15:34:21,525 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2019-03-11 15:34:21,531 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.ExtensionLoaderStage
+2019-03-11 15:34:21,531 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2019-03-11 15:34:21,531 INFO  main                             - Start to deploy plugin: web-ark-plugin
+2019-03-11 15:34:21,537 INFO  main                             - Service: com.alipay.sofa.ark.spi.web.EmbeddedServerService publish by: ServiceProvider{provider='Ark plugin:web-ark-plugin', order=100} succeed
+2019-03-11 15:34:21,537 INFO  main                             - Finish to deploy plugin: web-ark-plugin
+2019-03-11 15:34:21,538 INFO  main                             - Start to deploy plugin: spi-facade
+2019-03-11 15:34:21,538 INFO  main                             - Finish to deploy plugin: spi-facade
+2019-03-11 15:34:21,538 INFO  main                             - Start to deploy plugin: runtime-sofa-boot-plugin
+2019-03-11 15:34:21,568 INFO  main                             - Service: com.alipay.sofa.ark.spi.service.event.EventHandler publish by: ServiceProvider{provider='Ark plugin:runtime-sofa-boot-plugin', order=1500} succeed
+2019-03-11 15:34:21,573 INFO  main                             - Inject {field= bizManagerService} of {service= ServiceMetadata{service='com.alipay.sofa.runtime.integration.invoke.DynamicJvmServiceProxyFinder', provider='ServiceProvider{provider='Ark plugin:runtime-sofa-boot-plugin', order=1500}'}} success!
+2019-03-11 15:34:21,573 INFO  main                             - Service: com.alipay.sofa.runtime.integration.invoke.DynamicJvmServiceProxyFinder publish by: ServiceProvider{provider='Ark plugin:runtime-sofa-boot-plugin', order=1500} succeed
+2019-03-11 15:34:21,573 INFO  main                             - Finish to deploy plugin: runtime-sofa-boot-plugin
+2019-03-11 15:34:21,573 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployPluginStage
+2019-03-11 15:34:21,573 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+2019-03-11 15:34:21,573 INFO  main                             - BizDeployer='{name='DefaultBizDeployer', provider='Ark Container'}' is starting.
+2019-03-11 15:34:21,574 INFO  main                             - Begin to start biz: dynamic-app
+2019-03-11 15:34:23,261 INFO  main                             - Finish to start biz: dynamic-app
+2019-03-11 15:34:23,261 INFO  main                             - Begin to start biz: master-app
+2019-03-11 15:34:25,360 INFO  main                             - Inject {field= eventAdminService} of {service= com.alipay.sofa.ark.springboot.processor.ArkEventHandlerProcessor@7530ad9c} success!
+2019-03-11 15:34:25,424 INFO  main                             - Inject {field= embeddedServerService} of {service= com.alipay.sofa.ark.springboot.web.ArkTomcatServletWebServerFactory@192c3f1e} success!
+2019-03-11 15:34:25,424 INFO  main                             - Inject {field= bizManagerService} of {service= com.alipay.sofa.ark.springboot.web.ArkTomcatServletWebServerFactory@192c3f1e} success!
+2019-03-11 15:34:26,877 INFO  main                             - Finish to start biz: master-app
+2019-03-11 15:34:26,878 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.DeployBizStage
+2019-03-11 15:34:26,878 INFO  main                             - Start to process pipeline stage: com.alipay.sofa.ark.container.pipeline.FinishStartupStage
+2019-03-11 15:34:26,879 INFO  main                             - Finish to process pipeline stage: com.alipay.sofa.ark.container.pipeline.FinishStartupStage
+2019-03-11 15:34:53,123 INFO  Thread-0                         - Begin to stop ArkServiceContainer
+2019-03-11 15:34:53,123 INFO  Thread-0                         - Dispose service: com.alipay.sofa.ark.container.service.classloader.ClassLoaderServiceImpl
+2019-03-11 15:34:53,124 INFO  Thread-0                         - Dispose service: com.alipay.sofa.ark.container.service.biz.BizDeployServiceImpl
+2019-03-11 15:34:53,124 INFO  Thread-0                         - BizDeployer='{name='DefaultBizDeployer', provider='Ark Container'}' is stopping.
+2019-03-11 15:34:53,124 INFO  Thread-0                         - Begin to stop biz: dynamic-app
+2019-03-11 15:34:53,126 INFO  Thread-0                         - Finish to stop biz: dynamic-app
+2019-03-11 15:34:53,126 INFO  Thread-0                         - Begin to stop biz: master-app
+2019-03-11 15:34:53,137 INFO  Thread-0                         - Finish to stop biz: master-app
+2019-03-11 15:34:53,137 INFO  Thread-0                         - Dispose service: com.alipay.sofa.ark.container.service.plugin.PluginDeployServiceImpl
+2019-03-11 15:34:53,137 INFO  Thread-0                         - Start to unDeploy plugin: runtime-sofa-boot-pluginruntime-sofa-boot-plugin
+2019-03-11 15:34:53,138 INFO  Thread-0                         - Stop to unDeploy plugin: runtime-sofa-boot-pluginruntime-sofa-boot-plugin
+2019-03-11 15:34:53,138 INFO  Thread-0                         - Start to unDeploy plugin: spi-facadespi-facade
+2019-03-11 15:34:53,138 INFO  Thread-0                         - Stop to unDeploy plugin: spi-facadespi-facade
+2019-03-11 15:34:53,138 INFO  Thread-0                         - Start to unDeploy plugin: web-ark-pluginweb-ark-plugin
+2019-03-11 15:34:53,138 INFO  Thread-0                         - Stop to unDeploy plugin: web-ark-pluginweb-ark-plugin
+2019-03-11 15:34:53,138 INFO  Thread-0                         - Dispose service: com.alipay.sofa.ark.container.session.StandardTelnetServerImpl
+2019-03-11 15:34:53,140 INFO  Thread-0                         - Finish to stop ArkServiceContainer

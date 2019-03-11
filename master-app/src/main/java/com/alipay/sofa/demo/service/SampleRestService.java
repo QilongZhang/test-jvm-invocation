@@ -43,6 +43,7 @@ public class SampleRestService {
     @ResponseBody
     @RequestMapping(value="/start-job",method = RequestMethod.GET)
     public String startJob() {
+        MasterJob.referenceClient = referenceClient;
         //创建一个JobDetail实例，将该实例与MyJob Class绑定。
         JobDetail jobDetail= JobBuilder.newJob(MasterJob.class).withIdentity("masterJob", "master").build();
         //创建一个Trigger实例，定义该Job立即执行，并且每隔1秒钟重复一次，
@@ -87,28 +88,4 @@ public class SampleRestService {
         sb.append("result.map.keyB: ").append(result.getM().get("b")).append("\n");
         return sb.toString();
     }
-
-    public class MasterJob implements Job {
-        private Job jobA;
-        private Job jobB;
-
-        @Override
-        public void execute(JobExecutionContext context) throws JobExecutionException {
-            if (jobA == null) {
-                ReferenceParam<Job> referenceParam = new ReferenceParam();
-                referenceParam.setInterfaceType(Job.class);
-                referenceParam.setUniqueId("A");
-                jobA = referenceClient.reference(referenceParam);
-            }
-            if (jobB == null) {
-                ReferenceParam<Job> referenceParam = new ReferenceParam();
-                referenceParam.setInterfaceType(Job.class);
-                referenceParam.setUniqueId("B");
-                jobB = referenceClient.reference(referenceParam);
-            }
-            jobA.execute(context);
-            jobB.execute(context);
-        }
-    }
-
 }
